@@ -6,42 +6,37 @@
 #include <CayenneMQTTESP8266.h>
 
 // WiFi network info.
-char ssid[] = "ASUS_X00TD";
-char wifiPassword[] = "biscuitppp";
+char ssid[] = "SSID_NAME";
+char wifiPassword[] = "password";
 
 // Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
 char username[] = "329c1160-dbd4-11ea-883c-638d8ce4c23d";
 char password[] = "d05a55ff15cc392dfb9ce76cf9595f29b8001fb1";
-char clientID[] = "0a8a2f30-e7b0-11ea-b767-3f1a8f1211ba";
+char clientID[] = "35b0a9e0-e905-11ea-b767-3f1a8f1211ba";
 
-int obst = HIGH;
+int bstate = LOW;
+
+const int pushbtn = D1;
 
 void setup()
 {
   Cayenne.begin(username, password, clientID, ssid, wifiPassword);
-  pinMode(2, OUTPUT);
-  digitalWrite(2, HIGH);
-  pinMode(5, INPUT);
+
+  pinMode(pushbtn, INPUT);
+
 }
 
 void loop()
 {
   Cayenne.loop();
 
-  obst = digitalRead(5);
-  if(obst==HIGH)
+  bstate = digitalRead(pushbtn);
+  if(bstate==HIGH)
   {
-    Cayenne.virtualWrite(1,obst,"digital_sensor","d");
+    Cayenne.virtualWrite(1,bstate,"digital_sensor","d");
   }
   else
   {
-    Cayenne.virtualWrite(1,obst,"digital_sensor","d");
+    Cayenne.virtualWrite(1,bstate,"digital_sensor","d");
   }
-}
-
-CAYENNE_IN(0)
-{
-  digitalWrite(2, !getValue.asInt());
-
-  
 }
