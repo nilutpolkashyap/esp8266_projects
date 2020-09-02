@@ -15,7 +15,7 @@ char password[] = "d05a55ff15cc392dfb9ce76cf9595f29b8001fb1";
 char clientID[] = "35b0a9e0-e905-11ea-b767-3f1a8f1211ba";
 
 const int analogInPin = A0; 
-const int analogOutPin = D4;
+const int analogOutPin = D0;
 
 int sensorValue = 0;        // value read from the pot
 int outputValue = 0;
