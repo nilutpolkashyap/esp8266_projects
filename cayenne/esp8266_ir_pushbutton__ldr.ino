@@ -66,3 +66,4 @@ CAYENNE_IN(2)
 {
   digitalWrite(4, getValue.asInt());
 }
+
