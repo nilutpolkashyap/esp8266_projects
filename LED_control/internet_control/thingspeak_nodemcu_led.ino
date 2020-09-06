@@ -83,7 +83,6 @@ void loop() {
     Serial.println("D3 is Off..!");
   }
 
-
     
   Serial.println(led_1);
   Serial.println(led_2);
