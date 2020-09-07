@@ -7,7 +7,6 @@ const char* password = "wifi_password_name";// Replace with your wifi Password
 
 unsigned long channel =1094576;
 
-
 unsigned int led1 = 1;
 unsigned int led2 = 2;
 unsigned int led3 = 3;
