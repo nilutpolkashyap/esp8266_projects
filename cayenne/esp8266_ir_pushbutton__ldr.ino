@@ -6,8 +6,8 @@
 #include <CayenneMQTTESP8266.h>
 
 // WiFi network info.
-char ssid[] = "ASUS_X00TD";
-char wifiPassword[] = "biscuitppp";
+char ssid[] = "SSID_NAME";
+char wifiPassword[] = "PASSWORD";
 
 // Cayenne authentication info. This should be obtained from the Cayenne Dashboard.
 char username[] = "329c1160-dbd4-11ea-883c-638d8ce4c23d";
