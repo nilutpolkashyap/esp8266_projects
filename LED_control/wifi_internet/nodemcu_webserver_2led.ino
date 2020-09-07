@@ -6,7 +6,6 @@ const char* password = "wifi_password";
 
 WiFiServer server(80);
 
-
 String header;
 
 String output5State = "off";
