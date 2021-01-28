@@ -16,6 +16,7 @@ void loop()
   potvalue = analogRead(potpin);
   potvalue = map(potvalue, 0, 1023, 0, 255);
   Serial.println(potvalue);
+  analogWrite(9, potvalue);
   if(s.available()>0)
   {
     s.write(potvalue);
